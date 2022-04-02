@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="message_textSize">20sp</dimen>
+
+    <dimen name="thumb_size">250dp</dimen>
+    <dimen name="thumb_margin">5dp</dimen>
+
+</resources>

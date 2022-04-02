@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">Le Bon Coin TestApp</string>
+
+    <string name="error_loading">Loading data error</string>
+
+    <string name="menu_refresh">Refresh</string>
+
+    <string name="already_loading">Already loading....</string>
+    <string name="empty">Empty....</string>
+    <string name="loading">Loading....</string>
+    <string name="thumb">Thumbnail</string>
+
+</resources>

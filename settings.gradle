@@ -1,0 +1,2 @@
+rootProject.name='LeBonCoinTest'
+include ':app'

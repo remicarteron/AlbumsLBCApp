@@ -1,0 +1,11 @@
+*.iml
+.gradle/
+.idea/
+build/
+caches/
+captures/
+gradle/
+.DS_Store
+.externalNativeBuild
+.cxx
+gradlew*
