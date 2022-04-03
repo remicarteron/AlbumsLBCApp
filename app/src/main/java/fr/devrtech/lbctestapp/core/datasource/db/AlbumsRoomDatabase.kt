@@ -10,6 +10,13 @@ import fr.devrtech.lbctestapp.core.entity.Album
 @Database(entities = [Album::class], version = 1)
 abstract class AlbumsRoomDatabase : RoomDatabase() {
 
+    companion object {
+
+        // Database file name
+        const val DATABASE_NAME = "albums-DB"
+
+    }
+
     abstract fun albumDao(): AlbumsRoomDAO
 
 }

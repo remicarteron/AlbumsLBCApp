@@ -9,28 +9,16 @@ import fr.devrtech.lbctestapp.core.datasource.net.LeBonCoinAPIClient
 /**
  * Repository client
  */
-class AlbumsRepoClient() : AlbumsRepository {
+class AlbumsRepoClient(val webServiceClient : LeBonCoinAPIClient, val db: AlbumsRoomDatabase) : AlbumsRepository {
+
 
     companion object {
 
         // TAGs
         private val TAG = LBCTestApplication::class.java.getSimpleName()
 
-        private const val DATABASE_NAME = "albums-DB"
-
     }
 
-
-    // Web service client
-    private val webServiceClient = LeBonCoinAPIClient()
-
-    private val db: AlbumsRoomDatabase
-
-    init {
-        db = Room.databaseBuilder(
-            LBCTestApplication.getInstance(), AlbumsRoomDatabase::class.java, DATABASE_NAME
-        ).build()
-    }
 
     override suspend fun getAllAlbums(cached: Boolean): List<Album>? {
         if (cached) {

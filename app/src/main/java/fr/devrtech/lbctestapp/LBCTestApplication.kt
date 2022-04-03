@@ -2,6 +2,9 @@ package fr.devrtech.lbctestapp
 
 import android.app.Application
 import android.util.Log
+import androidx.room.Room
+import fr.devrtech.lbctestapp.core.datasource.db.AlbumsRoomDatabase
+import fr.devrtech.lbctestapp.core.datasource.net.LeBonCoinAPIClient
 import fr.devrtech.lbctestapp.core.repository.AlbumsRepoClient
 import fr.devrtech.lbctestapp.core.repository.AlbumsRepository
 
@@ -15,6 +18,7 @@ class LBCTestApplication : Application() {
 
         // TAGs
         private val TAG = LBCTestApplication::class.java.getSimpleName()
+
 
         // Singleton
         lateinit var APP_INSTANCE: LBCTestApplication
@@ -44,7 +48,14 @@ class LBCTestApplication : Application() {
         super.onCreate()
         Log.d(TAG, "onCreate !!!!!!")
         APP_INSTANCE = this
-        repository = AlbumsRepoClient()
+        // Create Web Service Client instance
+        val webServiceClient = LeBonCoinAPIClient()
+        // Create a Room db client instance
+        val db = Room.databaseBuilder(
+            this, AlbumsRoomDatabase::class.java, AlbumsRoomDatabase.DATABASE_NAME
+        ).build()
+        // Create repository impl instance
+        repository = AlbumsRepoClient(webServiceClient, db)
     }
 
 }
