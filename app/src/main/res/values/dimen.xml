@@ -3,7 +3,7 @@
 
     <dimen name="message_textSize">20sp</dimen>
 
-    <dimen name="thumb_size">250dp</dimen>
+    <dimen name="thumb_size">200dp</dimen>
     <dimen name="thumb_margin">5dp</dimen>
 
 </resources>

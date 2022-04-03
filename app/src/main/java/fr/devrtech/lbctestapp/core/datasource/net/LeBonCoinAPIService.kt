@@ -1,4 +1,4 @@
-package fr.devrtech.lbctestapp.core.net
+package fr.devrtech.lbctestapp.core.datasource.net
 
 import fr.devrtech.lbctestapp.core.entity.Album
 import retrofit2.Response

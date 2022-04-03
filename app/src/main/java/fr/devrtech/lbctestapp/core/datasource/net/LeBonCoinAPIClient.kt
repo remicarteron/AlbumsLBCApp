@@ -1,4 +1,4 @@
-package fr.devrtech.lbctestapp.core.net
+package fr.devrtech.lbctestapp.core.datasource.net
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder

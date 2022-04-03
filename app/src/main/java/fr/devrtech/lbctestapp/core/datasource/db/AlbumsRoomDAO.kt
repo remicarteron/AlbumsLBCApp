@@ -1,4 +1,4 @@
-package fr.devrtech.lbctestapp.core.db
+package fr.devrtech.lbctestapp.core.datasource.db
 
 import androidx.room.Dao
 import androidx.room.Insert

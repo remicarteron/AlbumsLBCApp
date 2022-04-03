@@ -85,7 +85,8 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
         // Swipe listener
         main_swipe.setOnRefreshListener(this)
         // Init recycler layout
-        main_recycler.layoutManager = GridLayoutManager(context, 2)
+        main_recycler.layoutManager =
+            GridLayoutManager(context, resources.getInteger(R.integer.thumb_columns))
     }
 
     private fun initObservers(viewModel: MainViewModel) {

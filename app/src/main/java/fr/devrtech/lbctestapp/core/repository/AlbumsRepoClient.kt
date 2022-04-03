@@ -2,9 +2,9 @@ package fr.devrtech.lbctestapp.core.repository
 
 import androidx.room.Room
 import fr.devrtech.lbctestapp.LBCTestApplication
-import fr.devrtech.lbctestapp.core.db.AlbumsRoomDatabase
+import fr.devrtech.lbctestapp.core.datasource.db.AlbumsRoomDatabase
 import fr.devrtech.lbctestapp.core.entity.Album
-import fr.devrtech.lbctestapp.core.net.LeBonCoinAPIClient
+import fr.devrtech.lbctestapp.core.datasource.net.LeBonCoinAPIClient
 
 /**
  * Repository client
